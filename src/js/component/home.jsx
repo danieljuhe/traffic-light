@@ -1,24 +1,48 @@
-import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React ,{useState} from "react";
+
 
 //create your first component
 const Home = () => {
+
+	const [ color, setColor] = useState("");
+	const main = {
+		width:"200px",
+		height:"550px",
+		display: "flex",
+  		flexDirection: "column",
+  		alignItems: "center",
+  		justifyContent: "center",
+		backgroundColor: "black",
+		borderRadius: "20px"
+	}
+	const red = {
+		width:"150px",
+		height:"150px",
+		borderRadius:"50%",
+		backgroundColor:"red",
+		margin:"10px"
+	}
+	const amber = {
+		width:"150px",
+		height:"150px",
+		borderRadius:"50%",
+		backgroundColor:"orange",
+		margin:"10px"
+	}
+	const green = {
+		width:"150px",
+		height:"150px",
+		borderRadius:"50%",
+		backgroundColor:"green",
+		margin:"10px"
+	}
+
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="main" style={main}>
+			<div className="red" style={red} onClick={()=>{}}></div>
+			<div className="amber" style={amber} onClick={()=>{}}></div>
+			<div className="green" style={green} onClick={()=>{}}></div>
 		</div>
 	);
 };
