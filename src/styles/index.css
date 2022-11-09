@@ -37,7 +37,7 @@
     background-color:purple;
     margin:10px;
     box-shadow: 0px 0px 40px purple;
-    visibility: hidden;
+    display: none;
 }
 h1{
     color:white;

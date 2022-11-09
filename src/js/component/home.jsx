@@ -44,7 +44,7 @@ const Home = () => {
 
 			<div className="green" style={{boxShadow: (color=="green") ? '0px 0px 40px #4f9' : '',}} onClick={greenChange}></div>
 			
-			<div className="purple" style={{visibility: (color=="purple") ? 'visible':'',}}></div>
+			<div className="purple" style={{display: (color=="purple") ? 'block':'',}}></div>
 		</div>
 		<div className='buttondiv'>
 			<button className="button" onClick={purple}><h1>Purple</h1></button>
