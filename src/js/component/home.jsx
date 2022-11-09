@@ -1,11 +1,9 @@
-
+import '../../styles/index.css'
 import React ,{useState} from "react";
 
 
 //create your first component
 const Home = () => {
-
-	const [ color, setColor] = useState("");
 	const main = {
 		width:"200px",
 		height:"550px",
@@ -14,35 +12,33 @@ const Home = () => {
   		alignItems: "center",
   		justifyContent: "center",
 		backgroundColor: "black",
-		borderRadius: "20px"
+		borderRadius: "20px", 
+		margin:"30px"
 	}
-	const red = {
-		width:"150px",
-		height:"150px",
-		borderRadius:"50%",
-		backgroundColor:"red",
-		margin:"10px"
+	
+	const [ color, setColor] = useState();
+
+	const redChange = () =>{
+		setColor("red")
 	}
-	const amber = {
-		width:"150px",
-		height:"150px",
-		borderRadius:"50%",
-		backgroundColor:"orange",
-		margin:"10px"
+
+	const amberChange = () =>{
+		setColor("naranjito");
 	}
-	const green = {
-		width:"150px",
-		height:"150px",
-		borderRadius:"50%",
-		backgroundColor:"green",
-		margin:"10px"
+
+	const greenChange = () =>{
+		setColor("green")
 	}
 
 	return (
 		<div className="main" style={main}>
-			<div className="red" style={red} onClick={()=>{}}></div>
-			<div className="amber" style={amber} onClick={()=>{}}></div>
-			<div className="green" style={green} onClick={()=>{}}></div>
+
+			<div className="red" style={{boxShadow: (color=="red") ? '0px 0px 40px red' : '',}} onClick={redChange}></div>
+
+			<div className="amber" style={{boxShadow: (color=="naranjito") ? '0px 0px 40px orange' : '',}} onClick={amberChange}></div>
+
+			<div className="green" style={{boxShadow: (color=="green") ? '0px 0px 40px #4f9' : '',}} onClick={greenChange}></div>
+			
 		</div>
 	);
 };
